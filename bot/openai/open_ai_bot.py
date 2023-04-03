@@ -34,10 +34,10 @@ class OpenAIBot(Bot, OpenAIImage):
                 logger.info("[OPEN_AI] query={}".format(query))
                 session_id = context['session_id']
                 reply = None
-                if query == '#清除记忆':
+                if query == '清除记忆':
                     self.sessions.clear_session(session_id)
                     reply = Reply(ReplyType.INFO, '记忆已清除')
-                elif query == '#清除所有':
+                elif query == '清除所有':
                     self.sessions.clear_all_session()
                     reply = Reply(ReplyType.INFO, '所有人记忆已清除')
                 else:
